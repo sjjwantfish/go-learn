@@ -1,0 +1,60 @@
+# Memory
+used_memory:2477856
+used_memory_human:2.36M
+used_memory_rss:4706304
+used_memory_rss_human:4.49M
+used_memory_peak:4860848
+used_memory_peak_human:4.64M
+used_memory_peak_perc:50.98%
+used_memory_overhead:1560392
+used_memory_startup:1011840
+used_memory_dataset:917464
+used_memory_dataset_perc:62.58%
+allocator_allocated:2440928
+allocator_active:4668416
+allocator_resident:4668416
+total_system_memory:8589934592
+total_system_memory_human:8.00G
+used_memory_lua:37888
+used_memory_lua_human:37.00K
+used_memory_scripts:0
+used_memory_scripts_human:0B
+number_of_cached_scripts:0
+maxmemory:0
+maxmemory_human:0B
+maxmemory_policy:noeviction
+allocator_frag_ratio:1.91
+allocator_frag_bytes:2227488
+allocator_rss_ratio:1.00
+allocator_rss_bytes:0
+rss_overhead_ratio:1.01
+rss_overhead_bytes:37888
+mem_fragmentation_ratio:1.93
+mem_fragmentation_bytes:2265376
+mem_not_counted_for_evict:0
+mem_replication_backlog:0
+mem_clients_slaves:0
+mem_clients_normal:17440
+mem_aof_buffer:0
+mem_allocator:libc
+active_defrag_running:0
+lazyfree_pending_objects:0
+lazyfreed_objects:0
+
+
+redis-benchmark -h 127.0.0.1 -p 6379  -n 10000 -t get
+Summary:
+  throughput summary: 99009.90 requests per second
+  latency summary (msec):
+          avg       min       p50       p95       p99       max
+        0.279     0.136     0.255     0.423     0.575     0.943
+
+
+
+
+redis-benchmark -h 127.0.0.1 -p 6379  -n 10000 -t set
+Summary:
+  throughput summary: 90090.09 requests per second
+  latency summary (msec):
+          avg       min       p50       p95       p99       max
+        0.308     0.088     0.271     0.527     0.823     1.335
